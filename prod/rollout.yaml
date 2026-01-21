@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: ghcr.io/lucas-everaerts/my-app:ae6aed125e33b42d915e38c192b2b6fe839b9073
+          image: ghcr.io/lucas-everaerts/my-app:ca1e4108dd2d5c75b2375e10990a2bd6ec47d27d
           ports:
             - containerPort: 5000
