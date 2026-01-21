@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: my-app
+  namespace: prod
 spec:
   replicas: 1
   revisionHistoryLimit: 2
