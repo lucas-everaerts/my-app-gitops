@@ -1,9 +1,10 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: my-app
 spec:
   replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: my-app
@@ -17,3 +18,8 @@ spec:
           image: ghcr.io/lucas-everaerts/my-app:eea0bb54acde4f913c2ea839342ad5cbf438b8d4
           ports:
             - containerPort: 5000
+  strategy:
+    blueGreen:
+      activeService: my-app-active
+      previewService: my-app-preview
+      autoPromotionEnabled: true

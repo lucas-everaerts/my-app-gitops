@@ -3,3 +3,5 @@ kind: Kustomization
 
 resources:
   - rollout.yaml
+  - service-active.yaml
+  - service-preview.yaml
