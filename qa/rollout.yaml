@@ -2,10 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: my-app
-  namespace: default
+  namespace: qa
 spec:
   replicas: 1
-  revisionHistoryLimit: 2
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: my-app
@@ -23,4 +23,4 @@ spec:
     blueGreen:
       activeService: my-app-active
       previewService: my-app-preview
-      autoPromotionEnabled: true
+      autoPromotionEnabled: false
