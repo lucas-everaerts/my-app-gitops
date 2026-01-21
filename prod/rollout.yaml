@@ -18,7 +18,7 @@ spec:
           image: ghcr.io/lucas-everaerts/my-app:ca1e4108dd2d5c75b2375e10990a2bd6ec47d27d
           ports:
             - containerPort: 5000
-strategy:
+  strategy:
     blueGreen:
       activeService: my-app-active
       previewService: my-app-preview

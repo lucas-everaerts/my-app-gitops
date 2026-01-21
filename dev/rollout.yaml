@@ -18,7 +18,6 @@ spec:
           image: ghcr.io/lucas-everaerts/my-app:60b0eecba4ed42511d672026a4025bad9dbff06a
           ports:
             - containerPort: 5000
-
   strategy:
     blueGreen:
       activeService: my-app-active
